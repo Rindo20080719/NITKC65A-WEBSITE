@@ -195,29 +195,9 @@ body{font:14px/1.4 sans-serif;color:#b89a9a;background:#080e22}
     <h2 class="ttl">お知らせ</h2>
     <ul class="news">
       <li class="nw">
-        <time class="nw-d"><span class="nw-y">2026</span>10.06</time>
-        <span class="nw-t is-key">重要</span>
-        <p class="nw-h">お知らせの見出しが入ります</p>
-      </li>
-      <li class="nw">
-        <time class="nw-d"><span class="nw-y">2026</span>10.05</time>
-        <span class="nw-t">案内</span>
-        <p class="nw-h">お知らせの見出しが入ります。長い見出しの場合は、このように折り返して表示されます</p>
-      </li>
-      <li class="nw">
-        <time class="nw-d"><span class="nw-y">2026</span>10.04</time>
-        <span class="nw-t">案内</span>
-        <p class="nw-h">お知らせの見出しが入ります</p>
-      </li>
-      <li class="nw">
-        <time class="nw-d"><span class="nw-y">2026</span>10.03</time>
+        <time class="nw-d" datetime="2026-10-27"><span class="nw-y">2026</span>10.27</time>
         <span class="nw-t">更新</span>
-        <p class="nw-h">お知らせの見出しが入ります</p>
-      </li>
-      <li class="nw">
-        <time class="nw-d"><span class="nw-y">2026</span>10.01</time>
-        <span class="nw-t">案内</span>
-        <p class="nw-h">お知らせの見出しが入ります</p>
+        <p class="nw-h">公式サイトを更新しました</p>
       </li>
     </ul>
   </div>
@@ -366,7 +346,11 @@ body{font:14px/1.4 sans-serif;color:#b89a9a;background:#080e22}
   var START=.12,SUN0=.55,DUR=3000,FADE=500,still=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
   function setScale(v,ss){sec.style.setProperty('--ts',v.toFixed(4));sec.style.setProperty('--ss',(ss===undefined?1:ss).toFixed(4))}
   function setLine(v){sec.style.setProperty('--so',v.toFixed(3))}
-  if(still){setScale(1);setLine(1);return}
+  var KEY='ennichi_intro_at',seen=0;   // 一度見たら10分間は、拡大アニメーションを飛ばして最初から完成の状態で出す
+  try{seen=+localStorage.getItem(KEY)||0}catch(e){}
+  var ago=Date.now()-seen;
+  if(still||(ago>=0&&ago<600000)){setScale(1);setLine(1);return}
+  try{localStorage.setItem(KEY,String(Date.now()))}catch(e){}
   setScale(START,SUN0);setLine(0);
   window.scrollTo(0,0);root.classList.add('lock');
   var t=0,last=Date.now();
