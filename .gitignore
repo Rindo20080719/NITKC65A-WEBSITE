@@ -1,2 +1,5 @@
 _old/
 .vercel/
+
+.vercel
+.env*
