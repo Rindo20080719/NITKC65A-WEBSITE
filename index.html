@@ -21,8 +21,8 @@ html.lock,html.lock body{overflow:hidden}   /* アニメーション中は画面
 .bandsub{position:absolute;left:0;right:0;top:calc(var(--tt) + var(--tw) * .40196);z-index:3;display:block;text-align:center;opacity:var(--so,0);font:900 clamp(14px,2.2vw,30px)/1 'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif;letter-spacing:.22em;text-indent:.22em;color:#111114}
 .sky{position:sticky;top:0;height:100vh;z-index:0;background:#9a1318}   /* 1画面目は、その場に固定(スクロールで動かない)。2画面目以降が、この上に重なって上がってくる */
 .sky .screen{border-bottom:none;overflow:hidden;--tw:102vw;--tt:88px}   /* --tw: 鳥居の幅、--tt: 鳥居の上端。日の丸と「202教室」もこれに合わせて動く */
-@media (max-aspect-ratio:3/4){   /* スマホ縦: 鳥居を大きくして(笠木の端は画面外へ)、画面の縦真ん中あたりに置く */
-  .sky .screen{--tw:125vw;--tt:max(88px,calc(50vh - var(--tw) * .505 + 24px))}
+@media (max-aspect-ratio:3/4){   /* スマホ縦: 鳥居を端まで全部見せて、画面の縦真ん中あたりに置く */
+  .sky .screen{--tw:96vw;--tt:max(88px,calc(50vh - var(--tw) * .505 + 24px))}
   @supports (height:1svh){.sky .screen{--tt:max(88px,calc(50svh - var(--tw) * .505 + 24px))}}
 }
 .school{display:block;position:relative;width:100%;height:auto;aspect-ratio:2000/1085;overflow:visible}   /* 日の丸の上端が絵の枠より少し上に出るので、切らずに見せる */
