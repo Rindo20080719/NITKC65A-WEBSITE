@@ -39,6 +39,7 @@ html.lock,html.lock body{overflow:hidden}   /* アニメーション中は画面
 /* 2〜5ページ: 和紙風の背景(生成りの紙に、細かい繊維、長い繊維、紙の厚みのむら) */
 body>section.screen,.reveal>section.screen{background:url(assets/washi.png),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .36 0 0 0 0 .25 0 0 0 0 .16 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E") #f3ebd8;position:relative;z-index:1}   /* 和紙: うっすらした繊維(assets/washi.png、つなぎ目なしの繰り返し) + 細かいざらつき。目立たない程度 */
 @media (max-aspect-ratio:3/4){body>section.screen,.reveal>section.screen{min-height:0;padding-block:64px}}   /* スマホ縦: 各画面を1画面分の高さに引き伸ばさず、中身の高さで詰めて並べる */
+body>section.screen~section.screen,.reveal>section.screen{margin-top:-1px}   /* 画面同士を1pxだけ重ねる: 高さの端数で境目にすき間ができ、後ろの赤い1画面目が細い線に見えるのを防ぐ */
 
 body>section.screen .box,.reveal>section.screen .box{background:rgba(70,40,25,.05)}
 @keyframes heroUp{from{transform:translate3d(0,0,0)}to{transform:translate3d(0,-36vh,0)}}
