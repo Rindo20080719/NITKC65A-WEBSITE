@@ -206,7 +206,7 @@ body{font:14px/1.4 sans-serif;color:#b89a9a;background:#9a1318}   /* ページ�
             <g class="fm-a" tabindex="0" role="button" aria-label="千本くじ" data-name="千本くじ" data-key="kuji"><rect x="430" y="50" width="270" height="190"/><text x="565" y="145" text-anchor="middle" dominant-baseline="central" font-size="62" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">千本くじ</text></g>
             <g class="fm-a" tabindex="0" role="button" aria-label="輪投げ" data-name="輪投げ" data-key="wanage"><rect x="748" y="50" width="430" height="214"/><text x="963" y="157" text-anchor="middle" dominant-baseline="central" font-size="104" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">輪投げ</text></g>
             <g class="fm-a" tabindex="0" role="button" aria-label="受付" data-name="受付" data-key="uketsuke"><rect x="1337" y="240" width="193" height="322"/><text x="1433.5" y="341.2" text-anchor="middle" dominant-baseline="central" font-size="104" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">受</text><text x="1433.5" y="460.8" text-anchor="middle" dominant-baseline="central" font-size="104" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">付</text></g>
-            <g class="fm-a" tabindex="0" role="button" aria-label="本殿" data-name="本殿" data-tx="縁日のいちばん奥にかまえる本殿。機械神宮の神さまに、日ごろの感謝とお願いごとをどうぞ。"><rect x="67" y="280" width="292" height="421"/><text x="213" y="426.1" text-anchor="middle" dominant-baseline="central" font-size="112" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">本</text><text x="213" y="554.9" text-anchor="middle" dominant-baseline="central" font-size="112" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">殿</text></g>
+            <g class="fm-a" tabindex="0" role="button" aria-label="本殿" data-name="本殿" data-key="honden"><rect x="67" y="280" width="292" height="421"/><text x="213" y="426.1" text-anchor="middle" dominant-baseline="central" font-size="112" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">本</text><text x="213" y="554.9" text-anchor="middle" dominant-baseline="central" font-size="112" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">殿</text></g>
             <g class="fm-a" tabindex="0" role="button" aria-label="お守り" data-name="お守り" data-key="omamori"><rect x="67" y="760" width="292" height="180"/><text x="213" y="850" text-anchor="middle" dominant-baseline="central" font-size="84" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">お守り</text></g>
             <g class="fm-a fm-torii" tabindex="0" role="button" aria-label="鳥居" data-name="鳥居" data-key="torii"><rect class="fm-hit" x="585" y="310" width="260" height="580"/><rect class="fm-bar" x="595" y="320" width="100" height="559"/><text class="fm-tl" x="768" y="535" text-anchor="middle" dominant-baseline="central" font-size="112" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">鳥</text><text class="fm-tl" x="768" y="668" text-anchor="middle" dominant-baseline="central" font-size="112" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">居</text></g>
             <g class="fm-a" tabindex="0" role="button" aria-label="ボーリング" data-name="ボーリング" data-key="bowling"><rect x="67" y="992" width="512" height="156"/><text x="323" y="1070" text-anchor="middle" dominant-baseline="central" font-size="84" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">ボーリング</text></g>
@@ -231,6 +231,11 @@ body{font:14px/1.4 sans-serif;color:#b89a9a;background:#9a1318}   /* ページ�
           </figure>
         </template>
       </li>
+      <li class="ex" data-key="honden">
+        <div class="ex-ph"><img src="assets/honden.jpg" alt="段ボールで作った本殿(瓦屋根と障子、賽銭箱)"></div>
+        <div class="ex-hd"><h3 class="ex-nm">本殿</h3></div>
+        <p class="ex-tx">縁日のいちばん奥にかまえる本殿。機械神宮の神さまに、日ごろの感謝とお願いごとをどうぞ。</p>
+      </li>
       <li class="ex" data-key="omamori" data-coin="コイン1枚～">
         <div class="ex-ph"><img src="assets/omamori.jpg" alt="手作りのお守り4つ(梅、青海波、赤の鹿の子、緑の麻の葉)"></div>
         <div class="ex-hd"><span class="ex-no">01</span><h3 class="ex-nm">お守り</h3></div>
@@ -243,7 +248,7 @@ body{font:14px/1.4 sans-serif;color:#b89a9a;background:#9a1318}   /* ページ�
         </template>
       </li>
       <li class="ex" data-key="kuji" data-coin="コイン4枚～">
-        <div class="ex-ph" aria-hidden="true"></div>
+        <div class="ex-ph"><img src="assets/kuji.jpg" alt="竹の枠に吊るした千本くじのひもと景品"></div>
         <div class="ex-hd"><span class="ex-no">02</span><h3 class="ex-nm">千本くじ</h3></div>
         <p class="ex-tx">たくさんのひもの中から一本を選んで引くと、その先には景品が。何が当たるかは運しだい！</p>
       </li>
