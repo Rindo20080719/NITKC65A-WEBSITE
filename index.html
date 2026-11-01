@@ -107,6 +107,12 @@ html.exd-open,html.exd-open body{overflow:hidden}
 .exd-no{color:#9a1318;font:900 clamp(24px,2.6vw,34px)/1 'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif;font-variant-numeric:tabular-nums}
 .exd-nm{margin:0;color:#2b1510;font:900 clamp(19px,2.1vw,28px)/1.3 'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif;letter-spacing:.14em}
 .exd-gal{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(14px,1.8vw,22px) clamp(16px,2.2vw,28px);margin-top:clamp(14px,1.8vw,22px)}   /* 写真は小さく、横に説明 */
+.exd-gal:has(.exd-media){display:block}
+.exd-media{display:grid;grid-template-columns:16fr 6.75fr;gap:clamp(10px,1.4vw,16px);align-items:start}   /* 横長の動画と縦長の写真を、高さをそろえて横に並べる */
+.exd-media video,.exd-media img{display:block;width:100%;background:#e6dbc4}
+.exd-media video{aspect-ratio:16/9;background:#000}
+.exd-media img{aspect-ratio:3/4;object-fit:cover}
+@media(max-width:600px){.exd-media{grid-template-columns:1fr}.exd-media img{width:60%;margin:0 auto}}
 .exd-it{display:flex;gap:clamp(10px,1.2vw,16px);align-items:flex-start}
 .exd-it img{flex:none;display:block;width:clamp(84px,9vw,120px);aspect-ratio:3/4;object-fit:cover;background:#e6dbc4}
 .exd-tt{min-width:0}
@@ -187,9 +193,15 @@ body{font:14px/1.4 sans-serif;color:#b89a9a;background:#9a1318}   /* ページ�
         <p class="ex-tx">説明文が入ります</p>
       </li>
       <li class="ex">
-        <div class="ex-ph" aria-hidden="true"></div>
+        <div class="ex-ph"><img src="assets/bowling.jpg" alt="木のピン10本と赤いボール"></div>
         <div class="ex-hd"><span class="ex-no">04</span><h3 class="ex-nm">ミニボーリング</h3></div>
         <p class="ex-tx">説明文が入ります</p>
+        <template class="ex-more">   <!-- 詳細に出す中身(動画と景品の写真) -->
+          <div class="exd-media">
+            <video src="assets/bowling.mp4" poster="assets/bowling-poster.jpg" controls playsinline preload="none"></video>
+            <img src="assets/bowling-prize.jpg" alt="景品の消しゴムのセット">
+          </div>
+        </template>
       </li>
       <li class="ex">
         <div class="ex-ph" aria-hidden="true"></div>
@@ -432,6 +444,7 @@ body{font:14px/1.4 sans-serif;color:#b89a9a;background:#9a1318}   /* ページ�
   function close(){
     if(!cur||busy)return;busy=true;
     var card=cur;d.classList.remove('on');
+    gal.querySelectorAll('video').forEach(function(v){v.pause()});   // 閉じたら動画は止める
     if(!still){pn.style.transition=EASE+',opacity .45s ease';pn.style.transform=fromCard(card);pn.style.opacity='0'}
     setTimeout(function(){
       d.hidden=true;pn.style.transition='none';pn.style.transform='';pn.style.opacity='';
