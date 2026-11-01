@@ -71,8 +71,8 @@ body>section.screen .box,.reveal>section.screen .box{background:rgba(70,40,25,.0
 .sp-empty{margin:0;height:100%;display:grid;place-items:center;text-align:center;color:#5a4438;font:900 clamp(13px,1.2vw,15px)/1.9 'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif;letter-spacing:.08em}
 .sp-c{animation:spIn .35s ease both}
 @keyframes spIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.sp-ph{aspect-ratio:2/1;overflow:hidden;background:#e6dbc4;margin-bottom:clamp(12px,1.4vw,16px)}
-.sp-ph img{display:block;width:100%;height:100%;object-fit:cover}
+.sp-ph{overflow:hidden;background:#e6dbc4;margin-bottom:clamp(12px,1.4vw,16px)}   /* 写真は切らずに、元の縦横比のまま全部見せる */
+.sp-ph img{display:block;width:100%;height:auto}
 .sp-hd{margin:0;padding-bottom:clamp(6px,.8vw,10px);border-bottom:1px solid #9a1318;color:#2b1510;font:900 clamp(19px,2vw,26px)/1.3 'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif;letter-spacing:.14em}
 .sp-tx{margin:clamp(8px,1vw,12px) 0 0;color:#5a4438;font:900 clamp(13px,1.2vw,15px)/1.8 'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif;letter-spacing:.06em}
 .sp .exd-gal{grid-template-columns:1fr}
