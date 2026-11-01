@@ -92,9 +92,8 @@ body>section.screen .box,.reveal>section.screen .box{background:rgba(70,40,25,.0
 .fm-a>text{fill:#f3ebd8;pointer-events:none}
 .fm-a.on>rect:not(.fm-hit),.fm-a:focus-visible>rect:not(.fm-hit){fill:#9a1318}
 .fm-hit{fill:transparent}
-.fm-door polygon{fill:#2b1510;transition:fill .2s}
+.fm-door polygon{fill:#2b1510}   /* 入口・出口は目印だけ(押せない) */
 .fm-door .fm-dl{fill:#2b1510}
-.fm-door.on polygon,.fm-door:focus-visible polygon,.fm-door.on .fm-dl,.fm-door:focus-visible .fm-dl{fill:#9a1318}
 .fm-torii .fm-tl{fill:#2b1510;transition:fill .2s}   /* 鳥居も他の展示と同じ色(柱はこげ茶、選ぶと赤) */
 .fm-torii.on .fm-tl,.fm-torii:focus-visible .fm-tl{fill:#9a1318}
 .fm-hint{margin:8px 0 0;text-align:center;color:#5a4438;font:900 clamp(11px,1vw,13px)/1.5 'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif;letter-spacing:.06em}
@@ -199,8 +198,8 @@ body{font:14px/1.4 sans-serif;color:#b89a9a;background:#9a1318}   /* ページ�
           <svg viewBox="40 0 1520 1180" role="group" aria-label="202教室の店内マップ">
             <rect class="fm-floor" x="67" y="50" width="1463" height="1098"/>
             <path class="fm-wall" d="M185 50H67V1148H1530V50H1415M1207 50H393"/>
-            <g class="fm-a fm-door" tabindex="0" role="button" aria-label="出口" data-name="出口" data-tx="お帰りはこちらから"><rect class="fm-hit" x="170" y="20" width="240" height="180"/><polygon points="289,36 337,118 241,118"/><text class="fm-dl" x="289" y="170" text-anchor="middle" dominant-baseline="central" font-size="44" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">出口</text></g>
-            <g class="fm-a fm-door" tabindex="0" role="button" aria-label="入口" data-name="入口" data-tx="ここから入場します"><rect class="fm-hit" x="1192" y="20" width="240" height="190"/><polygon points="1263,50 1358,50 1310,133"/><text class="fm-dl" x="1250" y="185" text-anchor="middle" dominant-baseline="central" font-size="44" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">入口</text></g>
+            <g class="fm-door" aria-hidden="true"><polygon points="289,36 337,118 241,118"/><text class="fm-dl" x="289" y="170" text-anchor="middle" dominant-baseline="central" font-size="44" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">出口</text></g>
+            <g class="fm-door" aria-hidden="true"><polygon points="1263,50 1358,50 1310,133"/><text class="fm-dl" x="1250" y="185" text-anchor="middle" dominant-baseline="central" font-size="44" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">入口</text></g>
             <g class="fm-a" tabindex="0" role="button" aria-label="輪投げ" data-name="輪投げ" data-key="wanage"><rect x="748" y="50" width="430" height="214"/><text x="963" y="157" text-anchor="middle" dominant-baseline="central" font-size="104" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">輪投げ</text></g>
             <g class="fm-a" tabindex="0" role="button" aria-label="受付" data-name="受付" data-key="uketsuke"><rect x="1337" y="240" width="193" height="322"/><text x="1433.5" y="341.2" text-anchor="middle" dominant-baseline="central" font-size="104" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">受</text><text x="1433.5" y="460.8" text-anchor="middle" dominant-baseline="central" font-size="104" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">付</text></g>
             <g class="fm-a" tabindex="0" role="button" aria-label="本殿" data-name="本殿" data-tx="説明文が入ります"><rect x="67" y="280" width="292" height="421"/><text x="213" y="426.1" text-anchor="middle" dominant-baseline="central" font-size="112" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">本</text><text x="213" y="554.9" text-anchor="middle" dominant-baseline="central" font-size="112" font-family="'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif" font-weight="900">殿</text></g>
